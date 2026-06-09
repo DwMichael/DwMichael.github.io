@@ -1,29 +1,35 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Valheim Viki - przewodnik po Valheim</title>
-	<meta name="description" content="Valheim Viki to mobilny przewodnik po Valheim z informacjami o biomach, bossach, stworzeniach, broniach, jedzeniu, rzemiosle i zasobach.">
+	<title>Valheim Viki - Valheim companion guide</title>
+	<meta name="description" content="Valheim Viki is a mobile Valheim companion guide with biomes, bosses, creatures, weapons, armor, food, crafting and resources.">
 	<meta name="theme-color" content="#0c1716">
 	<meta property="og:title" content="Valheim Viki">
-	<meta property="og:description" content="Kompletny mobilny przewodnik po Valheim.">
+	<meta property="og:description" content="A complete mobile companion guide for Valheim.">
 	<meta property="og:image" content="https://dwmichael.github.io/assets/logo.png">
 	<meta property="og:type" content="website">
 	<link rel="icon" href="assets/logo.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<header class="site-header" aria-label="Glowna nawigacja">
+	<header class="site-header" aria-label="Main navigation" data-i18n-attr="aria-label:navLabel">
 		<a class="brand" href="#top" aria-label="Valheim Viki">
 			<img src="assets/logo.png" alt="" width="44" height="44">
 			<span>Valheim Viki</span>
 		</a>
-		<nav>
-			<a href="#features">Funkcje</a>
-			<a href="#screens">Podglad</a>
-			<a href="#support">Wsparcie</a>
-		</nav>
+		<div class="header-actions">
+			<nav>
+				<a href="#features" data-i18n="navFeatures">Features</a>
+				<a href="#screens" data-i18n="navPreview">Preview</a>
+				<a href="#support" data-i18n="navSupport">Support</a>
+			</nav>
+			<div class="language-switch" aria-label="Language" data-i18n-attr="aria-label:languageLabel">
+				<button type="button" data-lang="en" aria-pressed="true">EN</button>
+				<button type="button" data-lang="pl" aria-pressed="false">PL</button>
+			</div>
+		</div>
 	</header>
 
 	<main id="top">
@@ -31,31 +37,31 @@
 			<img class="hero-media" src="assets/hero.png" alt="">
 			<div class="hero-shade"></div>
 			<div class="hero-content">
-				<img class="app-mark" src="assets/logo.png" alt="Logo Valheim Viki" width="144" height="144">
+				<img class="app-mark" src="assets/logo.png" alt="Valheim Viki logo" width="144" height="144" data-i18n-attr="alt:logoAlt">
 				<p class="eyebrow">RABBITV</p>
 				<h1 id="hero-title">Valheim Viki</h1>
-				<p class="hero-copy">
-					Kompletny przewodnik po Valheim w jednej aplikacji mobilnej. Biomy, bossowie,
-					stworzenia, bronie, zbroje, jedzenie, rzemioslo i zasoby zawsze pod reka.
+				<p class="hero-copy" data-i18n="heroCopy">
+					A complete Valheim companion guide in one mobile app. Biomes, bosses,
+					creatures, weapons, armor, food, crafting and resources always at hand.
 				</p>
-				<div class="actions" aria-label="Linki aplikacji">
-					<a class="primary-action" href="https://play.google.com/store/apps/details?id=com.rabbitv.valheimviki" rel="noopener">
-						Pobierz w Google Play
+				<div class="actions" aria-label="App links" data-i18n-attr="aria-label:appLinksLabel">
+					<a class="primary-action" href="https://play.google.com/store/apps/details?id=com.rabbitv.valheimviki" rel="noopener" data-i18n="googlePlay">
+						Get it on Google Play
 					</a>
-					<a class="secondary-action" href="#screens">Zobacz aplikacje</a>
+					<a class="secondary-action" href="#screens" data-i18n="seeApp">See the app</a>
 				</div>
-				<dl class="quick-facts" aria-label="Informacje o aplikacji">
+				<dl class="quick-facts" aria-label="App information" data-i18n-attr="aria-label:appInfoLabel">
 					<div>
-						<dt>Pobrania</dt>
-						<dd>5 tys.+</dd>
+						<dt data-i18n="downloadsLabel">Downloads</dt>
+						<dd data-i18n="downloadsValue">5K+</dd>
 					</div>
 					<div>
-						<dt>Dziala</dt>
-						<dd>offline</dd>
+						<dt data-i18n="worksLabel">Works</dt>
+						<dd data-i18n="worksValue">offline</dd>
 					</div>
 					<div>
-						<dt>Kategoria</dt>
-						<dd>rozrywka</dd>
+						<dt data-i18n="categoryLabel">Category</dt>
+						<dd data-i18n="categoryValue">entertainment</dd>
 					</div>
 				</dl>
 			</div>
@@ -64,13 +70,13 @@
 		<section class="section intro" aria-labelledby="intro-title">
 			<div class="section-inner split">
 				<div>
-					<p class="eyebrow">Szybkie wyszukiwanie podczas gry</p>
-					<h2 id="intro-title">Jedna aplikacja do planowania wypraw, craftingu i walki.</h2>
+					<p class="eyebrow" data-i18n="introEyebrow">Fast search while playing</p>
+					<h2 id="intro-title" data-i18n="introTitle">One app for planning expeditions, crafting and combat.</h2>
 				</div>
-				<p>
-					Valheim Viki pomaga szybko sprawdzic najwazniejsze informacje bez przerywania rozgrywki.
-					Aplikacja jest projektowana dla nowych graczy i doswiadczonych wikingow, ktorzy chca
-					miec encyklopedie Valheim zawsze pod reka.
+				<p data-i18n="introCopy">
+					Valheim Viki helps you check important information quickly without interrupting gameplay.
+					The app is designed for new players and experienced vikings who want a Valheim encyclopedia
+					always nearby.
 				</p>
 			</div>
 		</section>
@@ -78,29 +84,29 @@
 		<section class="section feature-band" id="features" aria-labelledby="features-title">
 			<div class="section-inner">
 				<div class="section-heading">
-					<p class="eyebrow">Co znajdziesz w aplikacji</p>
-					<h2 id="features-title">Przewodnik po najwazniejszych systemach Valheim.</h2>
+					<p class="eyebrow" data-i18n="featuresEyebrow">Inside the app</p>
+					<h2 id="features-title" data-i18n="featuresTitle">A guide to the most important Valheim systems.</h2>
 				</div>
 				<div class="feature-grid">
 					<article>
 						<span>01</span>
-						<h3>Biomy i miejsca</h3>
-						<p>Poznawaj regiony swiata, wazne punkty na mapie, zloza rud i drzewa.</p>
+						<h3 data-i18n="featureOneTitle">Biomes and places</h3>
+						<p data-i18n="featureOneCopy">Explore world regions, important map locations, ore deposits and trees.</p>
 					</article>
 					<article>
 						<span>02</span>
-						<h3>Bossowie i stworzenia</h3>
-						<p>Sprawdzaj przeciwnikow, mini-bossow, dropy i przygotowanie do walki.</p>
+						<h3 data-i18n="featureTwoTitle">Bosses and creatures</h3>
+						<p data-i18n="featureTwoCopy">Check enemies, mini-bosses, drops and combat preparation.</p>
 					</article>
 					<article>
 						<span>03</span>
-						<h3>Ekwipunek</h3>
-						<p>Porownuj bronie, zbroje, narzedzia i statystyki potrzebne do progresu.</p>
+						<h3 data-i18n="featureThreeTitle">Equipment</h3>
+						<p data-i18n="featureThreeCopy">Compare weapons, armor, tools and stats needed for progression.</p>
 					</article>
 					<article>
 						<span>04</span>
-						<h3>Crafting i jedzenie</h3>
-						<p>Planuj materialy, stanowiska rzemieslnicze, potrawy i miody przed wyprawa.</p>
+						<h3 data-i18n="featureFourTitle">Crafting and food</h3>
+						<p data-i18n="featureFourCopy">Plan materials, crafting stations, meals and meads before an expedition.</p>
 					</article>
 				</div>
 			</div>
@@ -109,21 +115,21 @@
 		<section class="section showcase" id="screens" aria-labelledby="screens-title">
 			<div class="section-inner">
 				<div class="section-heading">
-					<p class="eyebrow">Podglad aplikacji</p>
-					<h2 id="screens-title">Szybki dostep do wiedzy, ktorej potrzebujesz w trakcie gry.</h2>
+					<p class="eyebrow" data-i18n="screensEyebrow">App preview</p>
+					<h2 id="screens-title" data-i18n="screensTitle">Quick access to the knowledge you need while playing.</h2>
 				</div>
 				<div class="phone-row">
 					<figure>
-						<img src="assets/main-screen.jpg" alt="Ekran glowny aplikacji Valheim Viki">
-						<figcaption>Ekran glowny</figcaption>
+						<img src="assets/main-screen.jpg" alt="Valheim Viki home screen" data-i18n-attr="alt:mainScreenAlt">
+						<figcaption data-i18n="mainScreenCaption">Home screen</figcaption>
 					</figure>
 					<figure>
-						<img src="assets/search-screen.jpg" alt="Wyszukiwarka w aplikacji Valheim Viki">
-						<figcaption>Wyszukiwarka</figcaption>
+						<img src="assets/search-screen.jpg" alt="Valheim Viki search screen" data-i18n-attr="alt:searchScreenAlt">
+						<figcaption data-i18n="searchScreenCaption">Search</figcaption>
 					</figure>
 					<figure>
-						<img src="assets/favorite-screen.jpg" alt="Ulubione elementy w aplikacji Valheim Viki">
-						<figcaption>Ulubione</figcaption>
+						<img src="assets/favorite-screen.jpg" alt="Valheim Viki favorites screen" data-i18n-attr="alt:favoriteScreenAlt">
+						<figcaption data-i18n="favoriteScreenCaption">Favorites</figcaption>
 					</figure>
 				</div>
 			</div>
@@ -133,14 +139,14 @@
 			<img class="support-media" src="assets/frost.png" alt="">
 			<div class="section-inner support-inner">
 				<div>
-					<p class="eyebrow">Pomoc i kontakt</p>
-					<h2 id="support-title">Masz pytanie albo znalazles problem?</h2>
-					<p>
-						Napisz do nas lub odwiedz strone aplikacji w Google Play. Valheim Viki jest rozwijana
-						i aktualizowana, aby stawac sie kompletna encyklopedia gry.
+					<p class="eyebrow" data-i18n="supportEyebrow">Help and contact</p>
+					<h2 id="support-title" data-i18n="supportTitle">Have a question or found an issue?</h2>
+					<p data-i18n="supportCopy">
+						Contact us or visit the app page on Google Play. Valheim Viki is developed and updated
+						to become a complete encyclopedia for the game.
 					</p>
 				</div>
-				<div class="contact-list" aria-label="Kontakt">
+				<div class="contact-list" aria-label="Contact" data-i18n-attr="aria-label:contactLabel">
 					<a href="mailto:hugojonson23@gmail.com">hugojonson23@gmail.com</a>
 					<a href="mailto:rabbitvdev@gmail.com">rabbitvdev@gmail.com</a>
 					<a href="https://play.google.com/store/apps/details?id=com.rabbitv.valheimviki" rel="noopener">Google Play</a>
@@ -150,8 +156,10 @@
 	</main>
 
 	<footer>
-		<p>Valheim Viki by RABBITV. This is an unofficial companion app and is not affiliated with Valheim or its creators.</p>
+		<p data-i18n="footerCopy">Valheim Viki by RABBITV. This is an unofficial companion app and is not affiliated with Valheim or its creators.</p>
 		<a href="app-ads.txt">app-ads.txt</a>
 	</footer>
+
+	<script src="i18n.js"></script>
 </body>
 </html>
